@@ -14,7 +14,7 @@
     <script src="{{asset('js/main.js')}}"></script>
     </head>
     <body>
-        <header id="header">
+    <header id="header">
     <nav id="navi">
       <ul class="nav-menu1">
         <li><a href="#magazine">雑誌</a></li>
@@ -26,6 +26,9 @@
         <li><a href="#" target="_blank">X</a></li>
       </ul>
     </nav>
+    <div class="make">
+    <a href='/posts/create'>作成</a>
+    </div>
     <div class="toggle_btn">
       <span></span>
       <span></span>
@@ -122,18 +125,7 @@
         </div>
       </div>
     </section>
-    </main>
-
-    <footer id="footer">
-      <a id="to_top" href="#"></a>
-
-      <ul class="menu">
-        <li><a href="#">当サイトについて</a></li>
-        <li><a href="#">サービス</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-      </ul>
-      <p class="copyright">Copyright &copy; 2023 NewBook All Rights Reserved.</p>
-    </footer>
+    
     </div>
         <div class='posts'>
             @foreach ($posts as $post)
@@ -146,5 +138,18 @@
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
+    </div>
+    </main>
+
+    <footer id="footer">
+      <a id="to_top" href="#"></a>
+
+      <ul class="menu">
+        <li><a href="#">当サイトについて</a></li>
+        <li><a href="#">サービス</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+      <p class="copyright">Copyright &copy; 2023 NewBook All Rights Reserved.</p>
+    </footer>
     </body>
 </html>

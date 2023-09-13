@@ -94,6 +94,12 @@ li{
   #navi ul.nav-menu2 li {
     padding: 5px 0;
  }
+ .make{
+    font-size: 1.35rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: absolute;
+ }
  .toggle_btn {
     display: block;
     position: fixed;
