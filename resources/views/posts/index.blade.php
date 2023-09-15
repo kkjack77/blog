@@ -14,6 +14,11 @@
     <script src="{{asset('js/main.js')}}"></script>
     </head>
     <body>
+    <nav class="make">
+      <ul>
+        <li><a href='/posts/create'>作成</a></li>
+      </ul>
+    </nav>
     <header id="header">
     <nav id="navi">
       <ul class="nav-menu1">
@@ -26,9 +31,6 @@
         <li><a href="#" target="_blank">X</a></li>
       </ul>
     </nav>
-    <div class="make">
-    <a href='/posts/create'>作成</a>
-    </div>
     <div class="toggle_btn">
       <span></span>
       <span></span>
@@ -125,13 +127,98 @@
         </div>
       </div>
     </section>
+    <section id="novel">
+      <h2 class="sec-title">小説</h2></h2>
+      <div class="grid">
+        <div class="item">
+          <img class="fadein" src="img/magazine.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine2.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine3.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine4.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine5.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine6.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine7.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine8.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="fadein" src="img/magazine9.jpg" alt="">
+          <div class="item-content">
+            <p class="item-cat">category</p>
+            <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="item-date">XXXX.XX.XX</p>
+          </div>
+        </div>
+      </div>
+    </section>
     
     </div>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
                     <a href="/posts/{{$post->id}}"><h2 class='title'>{{ $post->title }}</h2></a>
-                    <p class='body'>{{ $post->body }}</p>
+                    
                 </div>
             @endforeach
         </div>
