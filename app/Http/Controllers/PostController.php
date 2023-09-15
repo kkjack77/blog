@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return view('posts.index')->with(['posts' => $post->getPaginateByLimit(1)]);  
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit(3)]);  
     }
     
     public function create()
@@ -42,6 +42,12 @@ class PostController extends Controller
     {
         return view('posts.show')->with(['post' => $post]);
     
+    }
+    
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect('/');
     }
     
 }
