@@ -46,7 +46,7 @@
       <h2 class="sec-title">雑誌</h2>
       <div class="grid">
         <div class="item">
-          <img class="fadein" src="img/magazine.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine2.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine2.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine3.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine3.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine4.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine4.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -82,7 +82,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine5.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine5.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine6.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine6.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -100,7 +100,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine7.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine7.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -109,7 +109,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine8.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine8.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -118,7 +118,7 @@
         </div>
 
         <div class="item">
-          <img class="fadein" src="img/magazine9.jpg" alt="">
+          <a href='/posts/image'><img class="fadein" src="img/magazine9.jpg" alt=""></a>
           <div class="item-content">
             <p class="item-cat">category</p>
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -209,27 +209,22 @@
             <p class="item-text">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
             <p class="item-date">XXXX.XX.XX</p>
           </div>
+          
         </div>
-      </div>
-    
-    
-    </div>
-        <div class='posts'>
+        
+        <div class="item">
+          
+          <div class="item-content">
             @foreach ($posts as $post)
-            <div class="grid">
-                <div class='post'>
-                  <div class="item">
-                    <div class="item-content">
-                      <a href="/posts/{{$post->id}}"><p class='title item-cat'>{{ $post->title }}</p></a>
-                    </div>
-                  </div>  
-                </div>
-            </div>
+            
+              <a href="/posts/{{$post->id}}"><p class='title item-cat'>{{ $post->title }}</p></a>
+          
             @endforeach
-        </div>
+          </div>
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
+      </div>
       </div>
     </section>
     </main>

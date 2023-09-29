@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Http\Requests\PostRequest;
-
+use Cloudinary;
 
 class PostController extends Controller
 {
@@ -18,9 +18,13 @@ class PostController extends Controller
         return view('posts.create');
     }
     
-    public function store(Post $post, PostRequest $request) 
+    public function store(PostRequest $request, Post $post) 
     {
         $input = $request['post'];
+        if($request->file('images')){ 
+            $image_url = Cloudinary::upload($request->file('images')->getRealPath())->getSecurePath();
+            $input += ['image_url' => $image_url];
+        }
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
@@ -41,6 +45,11 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('posts.show')->with(['post' => $post]);
+    
+    }
+    public function image()
+    {
+        return view('posts.image');
     
     }
     
